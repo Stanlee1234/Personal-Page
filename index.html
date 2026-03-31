@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Personal Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <header class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hey, I'm</p>
+      <h1 class="hero-name">Your Name</h1>
+      <p class="hero-tagline">Developer · Designer · Creator</p>
+      <a class="hero-cta" href="#main">Explore my work ↓</a>
+    </div>
+    <div class="hero-shapes">
+      <span class="shape shape-1"></span>
+      <span class="shape shape-2"></span>
+      <span class="shape shape-3"></span>
+    </div>
+  </header>
+
+  <!-- ── MAIN CONTENT ──────────────────────────────────────── -->
+  <main id="main">
+
+    <!-- Tab nav -->
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab-btn active" data-tab="about"    role="tab" aria-selected="true"  aria-controls="panel-about">Who I Am</button>
+      <button class="tab-btn"        data-tab="what-i-do" role="tab" aria-selected="false" aria-controls="panel-what-i-do">What I Do</button>
+      <button class="tab-btn"        data-tab="projects"  role="tab" aria-selected="false" aria-controls="panel-projects">Projects</button>
+      <span class="tab-indicator"></span>
+    </nav>
+
+    <!-- ── ABOUT ──────────────────────────────────────────── -->
+    <section class="tab-panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+      <div class="panel-inner">
+        <div class="about-grid">
+          <div class="about-photo-wrap">
+            <div class="about-photo-placeholder">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="38" r="22"/>
+                <ellipse cx="50" cy="85" rx="34" ry="20"/>
+              </svg>
+              <p>Add your photo</p>
+            </div>
+          </div>
+          <div class="about-text">
+            <h2>Who I Am</h2>
+            <p class="lead">
+              Hi! I'm <strong>Your Name</strong> — a passionate
+              <!-- Edit this sentence to introduce yourself -->
+              developer based in <em>Your City</em>.
+            </p>
+            <p>
+              <!-- Tell us your story, background, interests, hobbies… -->
+              I love building things that live on the internet and figuring out how to make
+              complex problems simple. When I'm not at my keyboard you'll find me
+              [your hobbies here].
+            </p>
+            <ul class="about-facts">
+              <li><span class="fact-label">📍 Based in</span> <span>Your City, Country</span></li>
+              <li><span class="fact-label">🎓 Education</span> <span>Your School / Degree</span></li>
+              <li><span class="fact-label">💼 Currently</span> <span>What you're working on</span></li>
+              <li><span class="fact-label">📬 Contact</span> <span><a href="mailto:your@email.com">your@email.com</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHAT I DO ───────────────────────────────────────── -->
+    <section class="tab-panel" id="panel-what-i-do" role="tabpanel" aria-labelledby="tab-what-i-do">
+      <div class="panel-inner">
+        <h2>What I Do</h2>
+        <p class="lead">A quick look at my skills and areas of focus.</p>
+
+        <div class="cards">
+
+          <div class="card" style="--card-hue: 210">
+            <div class="card-icon">⚡</div>
+            <h3>Skill / Discipline 1</h3>
+            <p>Describe what you do here. What technologies do you use? What problems do you solve?</p>
+            <ul class="tag-list">
+              <li>Tag A</li><li>Tag B</li><li>Tag C</li>
+            </ul>
+          </div>
+
+          <div class="card" style="--card-hue: 265">
+            <div class="card-icon">🎨</div>
+            <h3>Skill / Discipline 2</h3>
+            <p>Another area where you shine. Fill in your tools, frameworks, or methodologies.</p>
+            <ul class="tag-list">
+              <li>Tag D</li><li>Tag E</li><li>Tag F</li>
+            </ul>
+          </div>
+
+          <div class="card" style="--card-hue: 160">
+            <div class="card-icon">🔍</div>
+            <h3>Skill / Discipline 3</h3>
+            <p>Your third area of expertise. What do you love doing most? What are you best at?</p>
+            <ul class="tag-list">
+              <li>Tag G</li><li>Tag H</li><li>Tag I</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ────────────────────────────────────────── -->
+    <section class="tab-panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects">
+      <div class="panel-inner">
+        <h2>Projects</h2>
+        <p class="lead">Things I've built — big, small, and everything in between.</p>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-thumb" style="--thumb-hue: 200">
+              <span class="project-thumb-icon">🚀</span>
+            </div>
+            <div class="project-info">
+              <h3>Project Name</h3>
+              <p>A short description of this project. What does it do? What problem does it solve? What did you learn?</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-ghost">Source</a>
+              </div>
+              <ul class="tag-list">
+                <li>React</li><li>Node</li><li>PostgreSQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb" style="--thumb-hue: 300">
+              <span class="project-thumb-icon">🛠️</span>
+            </div>
+            <div class="project-info">
+              <h3>Project Name</h3>
+              <p>Another project description. Highlight the challenge, your role, and the outcome.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-ghost">Source</a>
+              </div>
+              <ul class="tag-list">
+                <li>Python</li><li>FastAPI</li><li>Docker</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb" style="--thumb-hue: 140">
+              <span class="project-thumb-icon">🎯</span>
+            </div>
+            <div class="project-info">
+              <h3>Project Name</h3>
+              <p>Your third project. Even side projects and experiments count — add them all!</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-ghost">Source</a>
+              </div>
+              <ul class="tag-list">
+                <li>TypeScript</li><li>Next.js</li><li>Tailwind</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>Built with ♥ by <strong>Your Name</strong></p>
+    <div class="social-links">
+      <a href="https://github.com/yourhandle"   target="_blank" rel="noopener">GitHub</a>
+      <a href="https://twitter.com/yourhandle"  target="_blank" rel="noopener">Twitter</a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    /* ── TAB SWITCHING ────────────────────────────────────── */
+    const tabBtns   = document.querySelectorAll('.tab-btn');
+    const panels    = document.querySelectorAll('.tab-panel');
+    const indicator = document.querySelector('.tab-indicator');
+
+    function moveIndicator(btn) {
+      indicator.style.width  = btn.offsetWidth  + 'px';
+      indicator.style.left   = btn.offsetLeft   + 'px';
+    }
+
+    function switchTab(btn) {
+      const target = btn.dataset.tab;
+      tabBtns.forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-selected', b === btn);
+      });
+      panels.forEach(p => {
+        const isTarget = p.id === 'panel-' + target;
+        p.classList.toggle('active', isTarget);
+      });
+      moveIndicator(btn);
+    }
+
+    tabBtns.forEach(btn => btn.addEventListener('click', () => switchTab(btn)));
+
+    // initialise indicator position
+    window.addEventListener('load', () => moveIndicator(document.querySelector('.tab-btn.active')));
+    window.addEventListener('resize', () => moveIndicator(document.querySelector('.tab-btn.active')));
+
+    /* ── SCROLL-IN ANIMATIONS ─────────────────────────────── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.card, .project-card').forEach(el => {
+      el.classList.add('fade-up');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -3,17 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Personal Site</title>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🧊</text></svg>' />
+  <title>Stanley Lu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="mouse-glow" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
 
-  <!-- ── HERO ─────────────────────────────────────────────── -->
   <header class="hero" id="hero">
     <div class="hero-bg"></div>
+    <div class="starfield" aria-hidden="true"></div>
+    <div class="hero-gallery" aria-hidden="true">
+      <img class="gallery-img" src="home/image1.png" alt="" style="--i: 0;" />
+      <img class="gallery-img" src="home/image2.png" alt="" style="--i: 1;" />
+      <img class="gallery-img" src="home/image3.png" alt="" style="--i: 2;" />
+      <img class="gallery-img" src="home/image4.png" alt="" style="--i: 3;" />
+      <img class="gallery-img" src="home/image5.png" alt="" style="--i: 4;" />
+      <img class="gallery-img" src="home/image6.jpeg" alt="" style="--i: 5;" />
+      <img class="gallery-img" src="home/image7.jpeg" alt="" style="--i: 6;" />
+    </div>
     <div class="hero-content">
       <p class="hero-greeting">Hey, I'm</p>
-      <h1 class="hero-name">Stanley</h1>
+      <h1 class="hero-name">Stanley Lu</h1>
       <p class="hero-tagline">Student · Developer · Creator</p>
       <a class="hero-cta" href="#main">Explore my work ↓</a>
     </div>
@@ -24,10 +37,8 @@
     </div>
   </header>
 
-  <!-- ── MAIN CONTENT ──────────────────────────────────────── -->
   <main id="main">
 
-    <!-- Tab nav -->
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button class="tab-btn active" data-tab="about"    role="tab" aria-selected="true"  aria-controls="panel-about">Who I Am</button>
       <button class="tab-btn"        data-tab="what-i-do" role="tab" aria-selected="false" aria-controls="panel-what-i-do">What I Do</button>
@@ -35,12 +46,11 @@
       <span class="tab-indicator"></span>
     </nav>
 
-    <!-- ── ABOUT ──────────────────────────────────────────── -->
     <section class="tab-panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
       <div class="panel-inner">
         <div class="about-grid">
           <div class="about-photo-wrap">
-            <img class="about-photo" src="pfp.png" alt="My profile picture!" />
+            <img class="about-photo" src="/logo-images/pfp.png" alt="My profile picture!" />
           </div>
           <div class="about-text">
             <h2>Who I Am</h2>
@@ -49,7 +59,6 @@
               13-year-old living in <em>Washington State</em>.
             </p>
             <p>
-              <!-- Tell us your story, background, interests, hobbies… -->
               I love building games and projects; anything that comes to my mind. When I'm not at my keyboard, you'll find me
               Playing games, watching the most cursed feed ever, playing Basketball or swimming. (Rarely not procrastinating)
             </p>
@@ -63,7 +72,6 @@
       </div>
     </section>
 
-    <!-- ── WHAT I DO ───────────────────────────────────────── -->
     <section class="tab-panel" id="panel-what-i-do" role="tabpanel" aria-labelledby="tab-what-i-do">
       <div class="panel-inner">
         <h2>What I Do</h2>
@@ -72,29 +80,32 @@
         <div class="cards">
 
           <div class="card" style="--card-hue: 210">
-            <div class="card-icon">⚡</div>
-            <h3>Skill / Discipline 1</h3>
-            <p>Describe what you do here. What technologies do you use? What problems do you solve?</p>
+            <div class="card-icon">
+              <img src="logo-images/python.png" alt="Python logo" />
+            </div>
+            <h3>Python</h3>
+            <p>My first ever programming language learned, besides Scratch. I have been using it for a quite a long time, about 7 years now where I have learn a bunch of skills and done USACO and ACSL.</p>
             <ul class="tag-list">
-              <li>Tag A</li><li>Tag B</li><li>Tag C</li>
             </ul>
           </div>
 
           <div class="card" style="--card-hue: 265">
-            <div class="card-icon">🎨</div>
-            <h3>Skill / Discipline 2</h3>
-            <p>Another area where you shine. Fill in your tools, frameworks, or methodologies.</p>
+            <div class="card-icon">
+              <img src="logo-images/godot.svg" alt="Godot logo" />
+            </div>
+            <h3>Godot</h3>
+            <p>My #1 favorite game engine! It is super easy to use, as GdScript's syntax is super simmilar to Python, making it super easy to use and code.</p>
             <ul class="tag-list">
-              <li>Tag D</li><li>Tag E</li><li>Tag F</li>
             </ul>
           </div>
 
           <div class="card" style="--card-hue: 160">
-            <div class="card-icon">🔍</div>
-            <h3>Skill / Discipline 3</h3>
-            <p>Your third area of expertise. What do you love doing most? What are you best at?</p>
+            <div class="card-icon">
+              <img src="logo-images/html.png" alt="HTML logo" />
+            </div>
+            <h3>HTML</h3>
+            <p>My newest programming language learned! I have been using it for about a month or so and it is pretty good! There are so many possibilities with html. Making my first ever project inspired my into the web world!</p>
             <ul class="tag-list">
-              <li>Tag G</li><li>Tag H</li><li>Tag I</li>
             </ul>
           </div>
 
@@ -102,7 +113,6 @@
       </div>
     </section>
 
-    <!-- ── PROJECTS ────────────────────────────────────────── -->
     <section class="tab-panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects">
       <div class="panel-inner">
         <h2>Projects</h2>
@@ -112,51 +122,51 @@
 
           <article class="project-card">
             <div class="project-thumb" style="--thumb-hue: 200">
-              <span class="project-thumb-icon">🚀</span>
+              <img class="project-thumb-image" src="logo-images/Stellar.png" alt="Stellar banner image" />
             </div>
             <div class="project-info">
-              <h3>Project Name</h3>
-              <p>A short description of this project. What does it do? What problem does it solve? What did you learn?</p>
+              <h3>STELLAR</h3>
+              <p>I created this not long ago, as a side project. I used gn-math's github repo to port games onto the site, and also added chatting the website.</p>
               <div class="project-links">
-                <a href="#" class="btn btn-sm">Live Demo</a>
-                <a href="#" class="btn btn-sm btn-ghost">Source</a>
+                <a href="https://chillyproductionsispeak.web.app/stellar/main.html" class="btn btn-sm">Demo</a>
+                <a href="https://github.com/Stanlee1234/ChillyTech" class="btn btn-sm btn-ghost">Source</a>
               </div>
               <ul class="tag-list">
-                <li>React</li><li>Node</li><li>PostgreSQL</li>
+                <li>Html</li><li>Chatting</li><li>Games</li>
               </ul>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-thumb" style="--thumb-hue: 300">
-              <span class="project-thumb-icon">🛠️</span>
+              <img class="project-thumb-image" src="logo-images/Die-to-Win.png" alt="Die To Win banner image" />
             </div>
             <div class="project-info">
-              <h3>Project Name</h3>
-              <p>Another project description. Highlight the challenge, your role, and the outcome.</p>
+              <h3>Die To Win</h3>
+              <p>I made this for Hackclub Daydream Seattle, later submitted to Daydream Global just to get bombed and lost everything. It is super fun, and I definitely will make something like this again!</p>
               <div class="project-links">
-                <a href="#" class="btn btn-sm">Live Demo</a>
-                <a href="#" class="btn btn-sm btn-ghost">Source</a>
+                <a href="https://quxlest.itch.io/die-to-win" class="btn btn-sm">Demo</a>
+                <a href="https://github.com/Stanlee1234/die-to-win-1" class="btn btn-sm btn-ghost">Source</a>
               </div>
               <ul class="tag-list">
-                <li>Python</li><li>FastAPI</li><li>Docker</li>
+                <li>Godot</li><li>Hackclub Daydream</li>
               </ul>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-thumb" style="--thumb-hue: 140">
-              <span class="project-thumb-icon">🎯</span>
+              <img class="project-thumb-image" src="logo-images/Lofi-and-Chill.png" alt="Lofi and Chill banner image" />
             </div>
             <div class="project-info">
-              <h3>Project Name</h3>
-              <p>Your third project. Even side projects and experiments count — add them all!</p>
+              <h3>Lofi and Chill</h3>
+              <p>A project I made for Resolution, using NASA API to get the daily astronomy image, with over 10 different lofi songs, and also a Pomodoro timer, everything is there!</p>
               <div class="project-links">
-                <a href="#" class="btn btn-sm">Live Demo</a>
-                <a href="#" class="btn btn-sm btn-ghost">Source</a>
+                <a href="https://quxlest.itch.io/lofi-and-chill" class="btn btn-sm">Demo</a>
+                <a href="https://github.com/Stanlee1234/Lofi-and-Chill" class="btn btn-sm btn-ghost">Source</a>
               </div>
               <ul class="tag-list">
-                <li>TypeScript</li><li>Next.js</li><li>Tailwind</li>
+                <li>Html</li><li>Cozy</li><li>Chill</li>
               </ul>
             </div>
           </article>
@@ -167,60 +177,14 @@
 
   </main>
 
-  <!-- ── FOOTER ────────────────────────────────────────────── -->
   <footer class="site-footer">
-    <p>Built with ♥ by <strong>Your Name</strong></p>
+    <p>Built with ♥ by <strong>Stanley Lu</strong></p>
     <div class="social-links">
-      <a href="https://github.com/yourhandle"   target="_blank" rel="noopener">GitHub</a>
-      <a href="https://twitter.com/yourhandle"  target="_blank" rel="noopener">Twitter</a>
-      <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Stanlee1234"   target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/StanleyLu81427"  target="_blank" rel="noopener">X</a>
     </div>
   </footer>
 
-  <script>
-    /* ── TAB SWITCHING ────────────────────────────────────── */
-    const tabBtns   = document.querySelectorAll('.tab-btn');
-    const panels    = document.querySelectorAll('.tab-panel');
-    const indicator = document.querySelector('.tab-indicator');
-
-    function moveIndicator(btn) {
-      indicator.style.width  = btn.offsetWidth  + 'px';
-      indicator.style.left   = btn.offsetLeft   + 'px';
-    }
-
-    function switchTab(btn) {
-      const target = btn.dataset.tab;
-      tabBtns.forEach(b => {
-        b.classList.toggle('active', b === btn);
-        b.setAttribute('aria-selected', b === btn);
-      });
-      panels.forEach(p => {
-        const isTarget = p.id === 'panel-' + target;
-        p.classList.toggle('active', isTarget);
-      });
-      moveIndicator(btn);
-    }
-
-    tabBtns.forEach(btn => btn.addEventListener('click', () => switchTab(btn)));
-
-    // initialise indicator position
-    window.addEventListener('load', () => moveIndicator(document.querySelector('.tab-btn.active')));
-    window.addEventListener('resize', () => moveIndicator(document.querySelector('.tab-btn.active')));
-
-    /* ── SCROLL-IN ANIMATIONS ─────────────────────────────── */
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.card, .project-card').forEach(el => {
-      el.classList.add('fade-up');
-      observer.observe(el);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

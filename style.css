@@ -429,7 +429,21 @@ main, .site-footer { position: relative; z-index: 1; }
   font-size: .95rem;
   color: var(--text-muted);
 }
-.about-facts .fact-label { font-weight: 600; color: var(--text); min-width: 100px; }
+.about-facts .fact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 100px;
+}
+
+.about-facts .fact-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex: 0 0 18px;
+}
 
 .cards {
   display: grid;

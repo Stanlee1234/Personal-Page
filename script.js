@@ -49,6 +49,23 @@ document.querySelectorAll('.gallery-img').forEach((img) => {
   });
 });
 
+const galleryImages = Array.from(document.querySelectorAll('.hero-gallery .gallery-img'));
+
+if (galleryImages.length) {
+  const slotOrder = galleryImages.map((_, index) => index);
+
+  for (let i = slotOrder.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [slotOrder[i], slotOrder[j]] = [slotOrder[j], slotOrder[i]];
+  }
+
+  galleryImages.forEach((img, imageIndex) => {
+    const slotIndex = slotOrder[imageIndex];
+    img.style.setProperty('--i', String(slotIndex));
+    img.style.zIndex = String(galleryImages.length - slotIndex);
+  });
+}
+
 const body = document.body;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
